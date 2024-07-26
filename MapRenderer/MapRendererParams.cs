@@ -1,11 +1,11 @@
-﻿// Part of fCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
+﻿// Part of hCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
 using System;
 using System.Drawing.Imaging;
 using System.Text.RegularExpressions;
-using fCraft.GUI;
-using fCraft.MapConversion;
+using hCraft.GUI;
+using hCraft.MapConversion;
 
-namespace fCraft.MapRenderer {
+namespace hCraft.MapRenderer {
     /// <summary> Holds all parameters for MapRenderer program, and sets some defaults. </summary>
     class MapRendererParams {
         public int Angle { get; set; }

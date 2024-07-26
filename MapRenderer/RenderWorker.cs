@@ -1,13 +1,13 @@
-﻿// Part of fCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
+﻿// Part of hCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
 using System;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Threading;
-using fCraft.GUI;
+using hCraft.GUI;
 using ImageManipulation;
 
-namespace fCraft.MapRenderer {
+namespace hCraft.MapRenderer {
     /// <summary> Class responsible for rendering map files, in a dedicated thread. </summary>
     class RenderWorker {
         static int threadCount;

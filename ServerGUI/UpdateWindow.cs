@@ -6,7 +6,7 @@ using System.Windows.Forms;
 using System.Text;
 using System.IO;
 
-namespace fCraft.ServerGUI {
+namespace hCraft.ServerGUI {
     public sealed partial class UpdateWindow : Form {
         readonly UpdaterResult updateResult;
         readonly string updaterFullPath;
@@ -100,7 +100,7 @@ namespace fCraft.ServerGUI {
         private void bUpdateLater_Click( object sender, EventArgs e ) {
             Updater.RunAtShutdown = true;
             Logger.Log( LogType.SystemActivity,
-                        "An fCraft update will be applied next time the server is shut down or restarted." );
+                        "An hCraft update will be applied next time the server is shut down or restarted." );
             Close();
         }
 

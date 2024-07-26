@@ -1,4 +1,4 @@
-﻿namespace fCraft.ServerGUI {
+﻿namespace hCraft.ServerGUI {
     partial class UpdateWindow {
         /// <summary>
         /// Required designer variable.
@@ -42,7 +42,7 @@
             this.lHeader.Name = "lHeader";
             this.lHeader.Size = new System.Drawing.Size( 187, 13 );
             this.lHeader.TabIndex = 5;
-            this.lHeader.Text = "An update to fCraft is available!";
+            this.lHeader.Text = "An update to hCraft is available!";
             // 
             // bCancel
             // 
@@ -156,7 +156,7 @@
             this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "fCraft Updater";
+            this.Text = "hCraft Updater";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler( this.UpdateWindow_FormClosing );
             this.ResumeLayout( false );
             this.PerformLayout();

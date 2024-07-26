@@ -1,10 +1,10 @@
-﻿// Part of fCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
+﻿// Part of hCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
 
-namespace fCraft.ConfigGUI {
+namespace hCraft.ConfigGUI {
 
     [Serializable]
     // SortableBindingList by Tim Van Wassenhove, http://www.timvw.be/presenting-the-sortablebindinglistt/

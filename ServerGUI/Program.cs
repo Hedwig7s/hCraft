@@ -23,7 +23,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace fCraft.ServerGUI {
+namespace hCraft.ServerGUI {
     static class Program {
 
         [STAThread]

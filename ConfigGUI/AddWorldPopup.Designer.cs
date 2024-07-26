@@ -1,4 +1,4 @@
-﻿namespace fCraft.ConfigGUI {
+﻿namespace hCraft.ConfigGUI {
     partial class AddWorldPopup {
         /// <summary>
         /// Required designer variable.
@@ -50,7 +50,7 @@
             this.tStatus1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tStatus2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.previewLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.preview = new fCraft.ConfigGUI.CustomPictureBox();
+            this.preview = new hCraft.ConfigGUI.CustomPictureBox();
             this.cPreviewMode = new System.Windows.Forms.ComboBox();
             this.bSavePreview = new System.Windows.Forms.Button();
             this.tabs = new System.Windows.Forms.TabControl();
@@ -459,7 +459,7 @@
             this.lFileFormatList1.Name = "lFileFormatList1";
             this.lFileFormatList1.Size = new System.Drawing.Size(162, 78);
             this.lFileFormatList1.TabIndex = 0;
-            this.lFileFormatList1.Text = "Supported file formats:\r\n- fCraft and SpaceCraft (.fcm)\r\n- Vanilla / Creative (.d" +
+            this.lFileFormatList1.Text = "Supported file formats:\r\n- hCraft and SpaceCraft (.fcm)\r\n- Vanilla / Creative (.d" +
     "at)\r\n- MCSharp, MCZall, MCLawl (.lvl)\r\n- Survival Test (.mine)\r\n- Survival Indev" +
     " (.mclevel)";
             // 
@@ -610,7 +610,7 @@
             this.tsbDefaultPreset,
             tsSeparator5,
             this.tsbLoadPresetFromFile});
-            this.tsbLoadPreset.Image = global::fCraft.ConfigGUI.Properties.Resources.maps_stack;
+            this.tsbLoadPreset.Image = global::hCraft.ConfigGUI.Properties.Resources.maps_stack;
             this.tsbLoadPreset.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbLoadPreset.Name = "tsbLoadPreset";
             this.tsbLoadPreset.Size = new System.Drawing.Size(97, 22);
@@ -634,7 +634,7 @@
             this.tsbCopyGenSettings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             tsSeparator4,
             this.tsbImportSettingsFromFile});
-            this.tsbCopyGenSettings.Image = global::fCraft.ConfigGUI.Properties.Resources.map__arrow;
+            this.tsbCopyGenSettings.Image = global::hCraft.ConfigGUI.Properties.Resources.map__arrow;
             this.tsbCopyGenSettings.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbCopyGenSettings.Name = "tsbCopyGenSettings";
             this.tsbCopyGenSettings.Size = new System.Drawing.Size(165, 22);
@@ -649,7 +649,7 @@
             // 
             // tsbSavePreset
             // 
-            this.tsbSavePreset.Image = global::fCraft.ConfigGUI.Properties.Resources.disk;
+            this.tsbSavePreset.Image = global::hCraft.ConfigGUI.Properties.Resources.disk;
             this.tsbSavePreset.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbSavePreset.Name = "tsbSavePreset";
             this.tsbSavePreset.Size = new System.Drawing.Size(86, 22);

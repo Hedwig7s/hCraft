@@ -1,14 +1,14 @@
-﻿// Part of fCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
+﻿// Part of hCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using fCraft.ConfigGUI.Properties;
+using hCraft.ConfigGUI.Properties;
 
 
-namespace fCraft.ConfigGUI {
+namespace hCraft.ConfigGUI {
     sealed partial class ChatPreview : UserControl {
 
         struct ColorPair {

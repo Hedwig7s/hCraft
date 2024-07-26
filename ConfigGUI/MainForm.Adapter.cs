@@ -1,4 +1,4 @@
-﻿// Part of fCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
+﻿// Part of hCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using JetBrains.Annotations;
 
-namespace fCraft.ConfigGUI {
+namespace hCraft.ConfigGUI {
     // This section handles transfer of settings from Config to the specific UI controls, and vice versa.
     // Effectively, it's an adapter between Config's and ConfigUI's representations of the settings
     partial class MainForm {
@@ -664,7 +664,7 @@ namespace fCraft.ConfigGUI {
             const string worldListTempFileName = Paths.WorldListFileName + ".tmp";
             try {
                 XDocument doc = new XDocument();
-                XElement root = new XElement( "fCraftWorldList" );
+                XElement root = new XElement( "hCraftWorldList" );
                 foreach( WorldListEntry world in Worlds ) {
                     root.Add( world.Serialize() );
                 }

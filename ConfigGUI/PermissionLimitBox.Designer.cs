@@ -1,4 +1,4 @@
-﻿namespace fCraft.ConfigGUI {
+﻿namespace hCraft.ConfigGUI {
     partial class PermissionLimitBox {
         /// <summary> 
         /// Required designer variable.

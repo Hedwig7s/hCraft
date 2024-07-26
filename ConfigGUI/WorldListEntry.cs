@@ -1,13 +1,13 @@
-﻿// Part of fCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
+﻿// Part of hCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
 using System;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using fCraft.MapConversion;
+using hCraft.MapConversion;
 using JetBrains.Annotations;
 
-namespace fCraft.ConfigGUI {
+namespace hCraft.ConfigGUI {
     /// <summary> A wrapper for per-World metadata, designed to be usable with SortableBindingList.
     /// All these properties map directly to the UI controls. </summary>
     public sealed class WorldListEntry : ICloneable {

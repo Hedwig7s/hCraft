@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using JetBrains.Annotations;
 
-namespace fCraft.ConfigGUI {
+namespace hCraft.ConfigGUI {
     partial class MainForm {
         /// <summary>
         /// Required designer variable.
@@ -97,7 +97,7 @@ namespace fCraft.ConfigGUI {
             this.xRankPrefixesInList = new System.Windows.Forms.CheckBox();
             this.xRankPrefixesInChat = new System.Windows.Forms.CheckBox();
             this.xRankColorsInChat = new System.Windows.Forms.CheckBox();
-            this.chatPreview = new fCraft.ConfigGUI.ChatPreview();
+            this.chatPreview = new hCraft.ConfigGUI.ChatPreview();
             this.tabWorlds = new System.Windows.Forms.TabPage();
             this.xWoMEnableEnvExtensions = new System.Windows.Forms.CheckBox();
             this.bMapPath = new System.Windows.Forms.Button();
@@ -449,7 +449,7 @@ namespace fCraft.ConfigGUI {
             this.lUpdater.Name = "lUpdater";
             this.lUpdater.Size = new System.Drawing.Size(111, 15);
             this.lUpdater.TabIndex = 0;
-            this.lUpdater.Text = "fCraft update check";
+            this.lUpdater.Text = "hCraft update check";
             // 
             // groupBox2
             // 
@@ -462,7 +462,7 @@ namespace fCraft.ConfigGUI {
             this.groupBox2.Size = new System.Drawing.Size(315, 56);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "About fCraft";
+            this.groupBox2.Text = "About hCraft";
             // 
             // bChangelog
             // 
@@ -513,7 +513,7 @@ namespace fCraft.ConfigGUI {
             this.bOpenWiki.Name = "bOpenWiki";
             this.bOpenWiki.Size = new System.Drawing.Size(140, 23);
             this.bOpenWiki.TabIndex = 0;
-            this.bOpenWiki.Text = "Open fCraft Wiki";
+            this.bOpenWiki.Text = "Open hCraft Wiki";
             this.bOpenWiki.UseVisualStyleBackColor = true;
             this.bOpenWiki.Click += new System.EventHandler(this.bOpenWiki_Click);
             // 
@@ -3118,7 +3118,7 @@ namespace fCraft.ConfigGUI {
             this.xSubmitCrashReports.Name = "xSubmitCrashReports";
             this.xSubmitCrashReports.Size = new System.Drawing.Size(446, 19);
             this.xSubmitCrashReports.TabIndex = 0;
-            this.xSubmitCrashReports.Text = "Automatically submit crash reports to fCraft developers (fCraft.net)";
+            this.xSubmitCrashReports.Text = "Automatically submit crash reports to hCraft developers (hCraft.net)";
             this.xSubmitCrashReports.UseVisualStyleBackColor = true;
             // 
             // gPerformance
@@ -3576,7 +3576,7 @@ namespace fCraft.ConfigGUI {
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(700, 547);
             this.Name = "MainForm";
-            this.Text = "fCraft Config Tool";
+            this.Text = "hCraft Config Tool";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ConfigUI_FormClosing);
             this.tabs.ResumeLayout(false);
             this.tabGeneral.ResumeLayout(false);

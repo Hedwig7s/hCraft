@@ -1,10 +1,10 @@
-﻿// Part of fCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
+﻿// Part of hCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
 using System;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace fCraft.ConfigGUI {
+namespace hCraft.ConfigGUI {
     public sealed partial class TextEditorPopup : Form {
         public string OriginalText { get; private set; }
         public string FileName { get; private set; }

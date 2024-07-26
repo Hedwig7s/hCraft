@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using System;
 
-namespace fCraft.ServerGUI {
+namespace hCraft.ServerGUI {
     sealed class ConsoleBox : TextBox {
         const int WM_KEYDOWN = 0x100;
         const int WM_SYSKEYDOWN = 0x104;

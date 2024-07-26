@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle( "fCraft ServerCLI" )]
-[assembly: AssemblyDescription( "Command-line frontend for fCraft server" )]
+[assembly: AssemblyTitle( "hCraft ServerCLI" )]
+[assembly: AssemblyDescription( "Command-line frontend for hCraft server" )]
 [assembly: AssemblyConfiguration( "" )]
-[assembly: AssemblyCompany( "fCraft.net" )]
-[assembly: AssemblyProduct( "fCraft ServerCLI" )]
-[assembly: AssemblyCopyright( "fCraft is Copyright © Matvei Stefarov 2009-2014 (matvei.org)" )]
+[assembly: AssemblyCompany( "hCraft.net" )]
+[assembly: AssemblyProduct( "hCraft ServerCLI" )]
+[assembly: AssemblyCopyright( "hCraft is Copyright © Matvei Stefarov 2009-2014 (matvei.org)" )]
 [assembly: AssemblyTrademark( "" )]
 [assembly: AssemblyCulture( "" )]
 

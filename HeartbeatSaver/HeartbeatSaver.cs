@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading;
 
 
-namespace fCraft.HeartbeatSaver {
+namespace hCraft.HeartbeatSaver {
     static class HeartbeatSaver {
         const int ProtocolVersion = 7;
         static readonly TimeSpan Delay = TimeSpan.FromSeconds( 20 ),
@@ -19,7 +19,7 @@ namespace fCraft.HeartbeatSaver {
 
         const string UrlFileName = "externalurl.txt",
                      DefaultDataFileName = "heartbeatdata.txt",
-                     UserAgent = "fCraft HeartbeatSaver";
+                     UserAgent = "hCraft HeartbeatSaver";
 
         static string heartbeatDataFileName;
         static HeartbeatData data;

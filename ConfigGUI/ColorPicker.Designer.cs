@@ -1,4 +1,4 @@
-﻿namespace fCraft.ConfigGUI {
+﻿namespace hCraft.ConfigGUI {
     partial class ColorPicker {
         /// <summary>
         /// Required designer variable.

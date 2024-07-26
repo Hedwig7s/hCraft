@@ -1,8 +1,8 @@
-﻿// Part of fCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
+﻿// Part of hCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-namespace fCraft.ConfigGUI {
+namespace hCraft.ConfigGUI {
     // Small extension of PictureBox, that switches between HighQualityBicubic and NearestNeighbor
     // interpolation depending on image scale, to make the map images appear as sharp as possible.
     // Used by AddWorldPopup.

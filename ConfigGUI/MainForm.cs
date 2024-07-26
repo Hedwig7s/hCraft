@@ -1,4 +1,4 @@
-﻿// Part of fCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
+﻿// Part of hCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,12 +10,12 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 using System.Windows.Forms;
-using fCraft.GUI;
-using fCraft.MapGeneration;
+using hCraft.GUI;
+using hCraft.MapGeneration;
 using JetBrains.Annotations;
 
 
-namespace fCraft.ConfigGUI {
+namespace hCraft.ConfigGUI {
     public sealed partial class MainForm : Form {
         static MainForm instance;
         readonly Font bold;
@@ -33,7 +33,7 @@ namespace fCraft.ConfigGUI {
             dgvcBlockDB.FalseValue = YesNoAuto.No;
             dgvcBlockDB.IndeterminateValue = YesNoAuto.Auto;
             bold = new Font( Font, FontStyle.Bold );
-            Text = "fCraft Configuration (" + Updater.CurrentRelease.VersionString + ")";
+            Text = "hCraft Configuration (" + Updater.CurrentRelease.VersionString + ")";
         }
 
 
@@ -41,7 +41,7 @@ namespace fCraft.ConfigGUI {
             base.OnShown( e );
 
             if( typeof( Server ).Assembly.GetName().Version != typeof( Program ).Assembly.GetName().Version ) {
-                MessageBox.Show( "fCraft.dll version does not match ConfigGUI.exe version." );
+                MessageBox.Show( "hCraft.dll version does not match ConfigGUI.exe version." );
                 Application.Exit();
                 return;
             }
@@ -65,7 +65,7 @@ namespace fCraft.ConfigGUI {
 
             FillIRCNetworkList( false );
 
-            // Initialize fCraft's args, paths, and logging backend.
+            // Initialize hCraft's args, paths, and logging backend.
             Server.InitLibrary( Environment.GetCommandLineArgs() );
 
             // hook up handlers for various error scenarios

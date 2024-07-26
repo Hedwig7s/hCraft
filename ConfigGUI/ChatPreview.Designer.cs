@@ -1,4 +1,4 @@
-﻿namespace fCraft.ConfigGUI {
+﻿namespace hCraft.ConfigGUI {
     sealed partial class ChatPreview {
         /// <summary> 
         /// Required designer variable.

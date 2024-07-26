@@ -5,12 +5,12 @@ using System.Resources;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle( "fCraft HeartbeatSaver" )]
-[assembly: AssemblyDescription( "fCraft standalone heartbeat sender" )]
+[assembly: AssemblyTitle( "hCraft HeartbeatSaver" )]
+[assembly: AssemblyDescription( "hCraft standalone heartbeat sender" )]
 [assembly: AssemblyConfiguration( "" )]
-[assembly: AssemblyCompany( "fCraft.net" )]
-[assembly: AssemblyProduct( "fCraft HeartbeatSaver" )]
-[assembly: AssemblyCopyright( "fCraft is Copyright © Matvei Stefarov 2009-2014 (matvei.org)" )]
+[assembly: AssemblyCompany( "hCraft.net" )]
+[assembly: AssemblyProduct( "hCraft HeartbeatSaver" )]
+[assembly: AssemblyCopyright( "hCraft is Copyright © Matvei Stefarov 2009-2014 (matvei.org)" )]
 [assembly: AssemblyTrademark( "" )]
 [assembly: AssemblyCulture( "" )]
 

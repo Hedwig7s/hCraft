@@ -1,14 +1,14 @@
-﻿// Part of fCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
+﻿// Part of hCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
 using System;
 using System.Collections.Generic;
 using System.IO;
-using fCraft.Events;
-using fCraft.MapConversion;
+using hCraft.Events;
+using hCraft.MapConversion;
 using JetBrains.Annotations;
 using System.Text.RegularExpressions;
 using Mono.Options;
 
-namespace fCraft.MapConverter {
+namespace hCraft.MapConverter {
     static class MapConverter {
         static string importerName,
                       exporterName,

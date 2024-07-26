@@ -5,10 +5,10 @@ using System.Globalization;
 using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
-using fCraft.Events;
-using fCraft.GUI;
+using hCraft.Events;
+using hCraft.GUI;
 
-namespace fCraft.ServerGUI {
+namespace hCraft.ServerGUI {
 
     public sealed partial class MainForm : Form {
         volatile bool shutdownPending, startupComplete, shutdownComplete;
@@ -27,7 +27,7 @@ namespace fCraft.ServerGUI {
         void BeginStartup( object sender, EventArgs e ) {
             // check for assembly mismatch
             if( typeof( Server ).Assembly.GetName().Version != typeof( Program ).Assembly.GetName().Version ) {
-                MessageBox.Show( "fCraft.dll version does not match ServerGUI.exe version." );
+                MessageBox.Show( "hCraft.dll version does not match ServerGUI.exe version." );
                 Application.Exit();
                 return;
             }
@@ -37,8 +37,8 @@ namespace fCraft.ServerGUI {
             var forcedHandle = Handle;
 #pragma warning restore 168
 
-            // put fCraft version into the title
-            Text = "fCraft " + Updater.CurrentRelease.VersionString + " - starting...";
+            // put hCraft version into the title
+            Text = "hCraft " + Updater.CurrentRelease.VersionString + " - starting...";
 
             // set up event hooks
             Logger.Logged += OnLogged;
@@ -53,9 +53,9 @@ namespace fCraft.ServerGUI {
             } );
             logBox.ContextMenu.Popup += CopyMenuPopupHandler;
 
-            // start fCraft from a separate thread (to keep UI responsive)
+            // start hCraft from a separate thread (to keep UI responsive)
             startupThread = new Thread( StartupThread ) {
-                Name = "fCraft.ServerGUI.Startup",
+                Name = "hCraft.ServerGUI.Startup",
                 CurrentCulture = new CultureInfo( "en-US" )
             };
             startupThread.Start();
@@ -81,7 +81,7 @@ namespace fCraft.ServerGUI {
                     if( shutdownPending ) return;
                     if( update.UpdateAvailable ) {
                         if( updaterMode == UpdaterMode.Notify ) {
-                            String updateMsg = String.Format( "An fCraft update is available! Visit www.fCraft.net to download. " +
+                            String updateMsg = String.Format( "An hCraft update is available! Visit www.hCraft.net to download. " +
                                                               "Local version: {0}. Latest available version: {1}.",
                                                               Updater.CurrentRelease.VersionString,
                                                               update.LatestRelease.VersionString );
@@ -123,7 +123,7 @@ namespace fCraft.ServerGUI {
 
 
         void OnInitSuccess() {
-            Text = "fCraft " + Updater.CurrentRelease.VersionString + " - " + ConfigKey.ServerName.GetString();
+            Text = "hCraft " + Updater.CurrentRelease.VersionString + " - " + ConfigKey.ServerName.GetString();
         }
 
 
@@ -160,7 +160,7 @@ namespace fCraft.ServerGUI {
             shutdownPending = true;
             console.Enabled = false;
             console.Text = "Shutting down...";
-            Text = "fCraft " + Updater.CurrentRelease.VersionString + " - shutting down...";
+            Text = "hCraft " + Updater.CurrentRelease.VersionString + " - shutting down...";
             uriDisplay.Enabled = false;
             if( !startupComplete ) {
                 startupThread.Join();

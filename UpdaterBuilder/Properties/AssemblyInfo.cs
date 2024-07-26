@@ -5,12 +5,12 @@ using System.Resources;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle( "fCraft UpdateBuilder" )]
-[assembly: AssemblyDescription( "Tool for automating the process of building fCraft update binaries." )]
+[assembly: AssemblyTitle( "hCraft UpdateBuilder" )]
+[assembly: AssemblyDescription( "Tool for automating the process of building hCraft update binaries." )]
 [assembly: AssemblyConfiguration( "" )]
-[assembly: AssemblyCompany( "fCraft.net" )]
-[assembly: AssemblyProduct( "fCraft UpdateBuilder" )]
-[assembly: AssemblyCopyright( "fCraft is Copyright © Matvei Stefarov 2009-2014 (matvei.org)" )]
+[assembly: AssemblyCompany( "hCraft.net" )]
+[assembly: AssemblyProduct( "hCraft UpdateBuilder" )]
+[assembly: AssemblyCopyright( "hCraft is Copyright © Matvei Stefarov 2009-2014 (matvei.org)" )]
 [assembly: AssemblyTrademark( "" )]
 [assembly: AssemblyCulture( "" )]
 

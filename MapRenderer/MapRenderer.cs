@@ -1,4 +1,4 @@
-﻿// Part of fCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
+﻿// Part of hCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
 using System;
 using System.Collections.Generic;
 using System.Drawing.Imaging;
@@ -7,13 +7,13 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading;
-using fCraft.Events;
-using fCraft.GUI;
-using fCraft.MapConversion;
+using hCraft.Events;
+using hCraft.GUI;
+using hCraft.MapConversion;
 using JetBrains.Annotations;
 using Mono.Options;
 
-namespace fCraft.MapRenderer {
+namespace hCraft.MapRenderer {
     static class MapRenderer {
         static readonly BlockingQueue<RenderTask> ResultQueue = new BlockingQueue<RenderTask>();
         static readonly BlockingQueue<RenderTask> WorkQueue = new BlockingQueue<RenderTask>();

@@ -1,4 +1,4 @@
-﻿// Part of fCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
+﻿// Part of hCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,13 +10,13 @@ using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using fCraft.GUI;
-using fCraft.MapConversion;
-using fCraft.MapGeneration;
+using hCraft.GUI;
+using hCraft.MapConversion;
+using hCraft.MapGeneration;
 using JetBrains.Annotations;
 
 
-namespace fCraft.ConfigGUI {
+namespace hCraft.ConfigGUI {
     sealed partial class AddWorldPopup : Form {
         readonly BackgroundWorker bwLoader = new BackgroundWorker(),
                                   bwGenerator = new BackgroundWorker(),
@@ -554,7 +554,7 @@ namespace fCraft.ConfigGUI {
 
 
         void tName_Validating( object sender, CancelEventArgs e ) {
-            if( fCraft.World.IsValidName( tName.Text ) &&
+            if( hCraft.World.IsValidName( tName.Text ) &&
                 (!MainForm.IsWorldNameTaken( tName.Text ) ||
                  (originalWorldName != null && tName.Text.ToLower() == originalWorldName.ToLower())) ) {
                 tName.ForeColor = SystemColors.ControlText;
@@ -643,14 +643,14 @@ namespace fCraft.ConfigGUI {
             var genParams = genGui.GetParameters();
             if( savePresetDialog == null ) {
                 savePresetDialog = new SaveFileDialog {
-                    Filter = "fCraft MapGen Preset|*.fmgp|" +
+                    Filter = "hCraft MapGen Preset|*.fmgp|" +
                              "All files|*.*",
                     InitialDirectory = Paths.MapPath
                 };
             }
             savePresetDialog.FileName = genParams.Generator.Name + "_preset.fmgp";
             if( savePresetDialog.ShowDialog() == DialogResult.OK ) {
-                XElement root = new XElement( "fCraftMapGenPreset" );
+                XElement root = new XElement( "hCraftMapGenPreset" );
                 root.Add( new XElement( "Generator", genParams.Generator.Name ) );
                 root.Add( new XElement( "Version", genParams.Generator.Version ) );
                 XElement genParamsEl = new XElement( "Parameters" );
@@ -667,8 +667,8 @@ namespace fCraft.ConfigGUI {
             if( importSettingsDialog == null ) {
                 importSettingsDialog = new OpenFileDialog {
                     Filter = "All supported formats|*.fcm;*.ftpl|" +
-                             "fCraft Map|*.fcm|" +
-                             "fCraft Map Template (Legacy)|*.ftpl|" +
+                             "hCraft Map|*.fcm|" +
+                             "hCraft Map Template (Legacy)|*.ftpl|" +
                              "All files|*.*",
                     InitialDirectory = Paths.MapPath
                 };
@@ -713,7 +713,7 @@ namespace fCraft.ConfigGUI {
         }
 
 
-        const string LegacyTemplateMessage = "This version of fCraft does not [yet] support loading legacy .ftpl files.";
+        const string LegacyTemplateMessage = "This version of hCraft does not [yet] support loading legacy .ftpl files.";
 
         void MapGenParamsFromMap( string fileName, Map ourMap ) {
             tStatus2.Text = "";
@@ -812,7 +812,7 @@ namespace fCraft.ConfigGUI {
         void LoadPresetFromFile() {
             if( loadPresetDialog == null ) {
                 loadPresetDialog = new OpenFileDialog {
-                    Filter = "fCraft MapGen Preset|*.fmgp|" +
+                    Filter = "hCraft MapGen Preset|*.fmgp|" +
                              "All files|*.*",
                     InitialDirectory = Paths.MapPath
                 };

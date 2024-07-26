@@ -1,4 +1,4 @@
-﻿namespace fCraft.ConfigGUI {
+﻿namespace hCraft.ConfigGUI {
     partial class TextEditorPopup {
         /// <summary>
         /// Required designer variable.

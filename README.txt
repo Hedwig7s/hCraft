@@ -1,37 +1,37 @@
-Thank you for downloading fCraft, the custom Minecraft server.
+Thank you for downloading hCraft, the custom Minecraft server.
 
-If you like fCraft, support its development by donating!
-    http://donate.fCraft.net
+If you like hCraft, support its development by donating!
+    http://donate.hCraft.net
 
 
 
 === Installation (Windows) ====================================================
 
-fCraft requires Microsoft .NET Framework 3.5. Your system may already have it
+hCraft requires Microsoft .NET Framework 3.5. Your system may already have it
 installed, and you can download it from microsoft.com
-For more information, see http://fCraft.net/wiki/Installation_Instructions
+For more information, see http://hCraft.net/wiki/Installation_Instructions
 
 
 
 === Installation (Linux, Unix, MacOS X) =======================================
 
-fCraft requires Mono 2.8+ (minumum) or Mono 3.0+ (recommended). You can
+hCraft requires Mono 2.8+ (minumum) or Mono 3.0+ (recommended). You can
 download it from www.mono-project.org, or (on some Linux distributions) install
-it through your package manager. To be able to use graphical fCraft components
+it through your package manager. To be able to use graphical hCraft components
 (ServerGUI and ConfigGUI) you will also need GDI+ library (libgdiplus).
 
-Before starting fCraft, make sure that it has read/write permissions in the
-fCraft directory. Working directory and other paths can be set via command-
+Before starting hCraft, make sure that it has read/write permissions in the
+hCraft directory. Working directory and other paths can be set via command-
 line options (see below).
 
 To run ".exe" files with Mono, use the following syntax:
     Mono 2.8+:  "mono --gc=sgen SomeFile.exe"
     Mono 3.0+:  "mono SomeFile.exe"
 
-Also check out "fcraftd", unofficial script by Hellenion that makes fCraft
-easier to deploy and maintain under Linux: http://fCraft.net/wiki/fcraftd
+Also check out "fcraftd", unofficial script by Hellenion that makes hCraft
+easier to deploy and maintain under Linux: http://hCraft.net/wiki/fcraftd
 
-For more information, see http://fCraft.net/wiki/Installation_Instructions
+For more information, see http://hCraft.net/wiki/Installation_Instructions
 
 
 
@@ -40,14 +40,14 @@ For more information, see http://fCraft.net/wiki/Installation_Instructions
 Before starting the server for the first time, run ConfigGUI.exe to choose
 your server's name and settings.
 
-By default, fCraft servers are private. That means it will not be listed on
+By default, hCraft servers are private. That means it will not be listed on
 minecraft.net, and only players who have the link will be able to join. To set
 your server to public, set Visibility: [Public] in ConfigGUI, (or set
 "IsPublic" key to "true" in config.xml). Remember that if the serveris running
 while you make configuration changes, you need to restart it or use
 "/Reload config" command.
 
-You may need to add firewall exceptions for fCraft applications (ConfigGUI,
+You may need to add firewall exceptions for hCraft applications (ConfigGUI,
 ServerGUI, or ServerCLI, or ServerWinService) to allow incoming TCP connections
 on the listening port. Default port is 25565.
 
@@ -66,14 +66,14 @@ Server does not show up on minecraft.net list:
     section, above.
 
 "Could not connect to server: it's probably down":
-    Make sure that you added firewall exception for fCraft (if applicable),
+    Make sure that you added firewall exception for hCraft (if applicable),
     and forwarded the port on your router. If you are connecting from same
     computer that the server is working on, try connecting to:
     http://www.minecraft.net/classic/play?ip=127.0.0.1&port=_____
         (fill in the blank with your server's port number)
 
 "Could not verify player name":
-    Verification problems occur when your fCraft server cannot verify identity
+    Verification problems occur when your hCraft server cannot verify identity
     of connecting players. Here are some things that may cause or fix
     verification problems:
     1. If minecraft.net is offline or slow, wait for it to stabilize.
@@ -112,7 +112,7 @@ Other players cannot connect from the same LAN/network as me:
     (slightly less safe).
 
 Other problems:
-    See http://fCraft.net/wiki/Troubleshooting
+    See http://hCraft.net/wiki/Troubleshooting
 
 
 
@@ -127,8 +127,8 @@ Other problems:
                        server restart.
        ConfigCLI.exe - A simple command-line configuration tool.
 
-          fCraft.dll - Core of the server, used by all other applications.
-       fCraftGUI.dll - Provides shared functionality for Config and Server GUI.
+          hCraft.dll - Core of the server, used by all other applications.
+       hCraftGUI.dll - Provides shared functionality for Config and Server GUI.
 
        ServerCLI.exe - Command-line interface (CLI) for the server.
        ServerGUI.exe - Graphical interface (GUI) for the server.
@@ -141,12 +141,12 @@ Other problems:
 
 === Command-line Options ======================================================
 
-In addition to many settings stored in config.xml, fCraft has several special
+In addition to many settings stored in config.xml, hCraft has several special
 options that can only be set via command-line switches:
 
-    --path=<path>       Working path (directory) that fCraft should use. If the
+    --path=<path>       Working path (directory) that hCraft should use. If the
                         given path is relative, it's computed against the
-                        location of fCraft.dll
+                        location of hCraft.dll
 
     --logpath=<path>    Path (directory) where the log files should be placed.
                         If the given path is relative, it's computed against the
@@ -160,16 +160,16 @@ options that can only be set via command-line switches:
                         filename (typically "config.xml"). If the given path
                         is relative, it's computed against the working path.
 
-    --norestart         If this flag is present, fCraft will shutdown whenever
+    --norestart         If this flag is present, hCraft will shutdown whenever
                         it would normally restart (e.g. automatic updates or
                         /restart command). This may be useful if you are using
                         an auto-restart script or a process monitor.
 
-    --exitoncrash       If this flag is present, fCraft frontends will exit
+    --exitoncrash       If this flag is present, hCraft frontends will exit
                         at once in the event of an unrecoverable crash, instead
                         of showing a message and prompting for user input.
 
-    --noupdater         If this flag is present, fCraft will not launch the
+    --noupdater         If this flag is present, hCraft will not launch the
                         downloaded UpdateInstaller.exe when restarting for
                         update/shutdown. It will handle all other aspects of
                         the update process, including exiting with the correct
@@ -190,23 +190,23 @@ When you first join the server, promote yourself by typing...
 
 Type "/help" in-game or in server console to get started. Type "/commands" for
 a list of available commands. For detailed information, please visit:
-    http://fCraft.net/wiki
+    http://hCraft.net/wiki
 
 To request features, report bugs, or receive support, please visit:
-    http://forum.fCraft.net
+    http://forum.hCraft.net
 
-For quick help/support, join #fCraft.dev channel on Esper.net IRC:
-    irc://irc.esper.net:5555/fCraft.dev
+For quick help/support, join #hCraft.dev channel on Esper.net IRC:
+    irc://irc.esper.net:5555/hCraft.dev
 
-See CHANGELOG.txt or visit http://fCraft.net/wiki/Version_history for complete
+See CHANGELOG.txt or visit http://hCraft.net/wiki/Version_history for complete
 information about changes in this release compared to previous versions of
-fCraft.
+hCraft.
 
 
 
 === Licensing =================================================================
 
-fCraft is open-source and free for all uses. fCraft code and binaries are
+hCraft is open-source and free for all uses. hCraft code and binaries are
 licensed and distributed under the permissive MIT License, reproduced here:
 
 ----
@@ -231,37 +231,37 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ----
 
-If you create fCraft plugins that do not include any substantial portions of
-fCraft's original code, they belong to you and you are free to do absolutely
+If you create hCraft plugins that do not include any substantial portions of
+hCraft's original code, they belong to you and you are free to do absolutely
 anything with them. However, if you would like to distribute whole modified
-copies of fCraft, please follow the MIT License terms.
+copies of hCraft, please follow the MIT License terms.
 
 Original Minecraft was developed by Markus "Notch" Persson of Mojang, and is 
-not affiliated with fCraft in any way. fCraft does not use any code, assets,
+not affiliated with hCraft in any way. hCraft does not use any code, assets,
 or any other files from Minecraft.
 
 
 
 === Credits ===================================================================
 
-fCraft was developed by Matvei Stefarov (me@matvei.org) in 2009-2014
+hCraft was developed by Matvei Stefarov (me@matvei.org) in 2009-2014
 
-Thanks to fCraft code contributors and modders:
+Thanks to hCraft code contributors and modders:
     Asiekierka, Dag10, Dankirk, Destroyer, FontPeg, Hellenion, Jonty800,
     M1_Abrams, Optical-Lza, Redshift, SystemX17, TkTech, Wootalyzer.
 
-Thanks to people who supported fCraft development through donations:
-    fCraft.net community, Allie, D3M0N, Destoned, DreamPhreak, Pandorum,
+Thanks to people who supported hCraft development through donations:
+    hCraft.net community, Allie, D3M0N, Destoned, DreamPhreak, Pandorum,
     Redshift, TkTech, ven000m, wtfmejt, Team9000 and SpecialAttack.net
     communities, and others who donated anonymously.
 
-Thanks to people whose code has been ported to fCraft:
+Thanks to people whose code has been ported to hCraft:
     Dudecon (Forester), Osici (Omen), vLK (MinerCPP), Tim Van Wassenhove,
     Paul Bourke, Chris Wilson.
 
-Thanks to Minecraft servers that helped test and improve fCraft:
+Thanks to Minecraft servers that helped test and improve hCraft:
     TheOne's Zombie Survival, SpecialAttack.net Freebuild, Team9000 Freebuild,
-    D3M0Ns FreeBuild, ~The Best Freebuild 24/7~, fCraft Freebuild Official,
+    D3M0Ns FreeBuild, ~The Best Freebuild 24/7~, hCraft Freebuild Official,
     Red Solidus Freebuild, Platinum Moon Freebuild.
 
 Thanks to people who submitted bug reports and feature requests:
@@ -274,4 +274,4 @@ Special thanks for inspiration and suggestions:
     PyroPyro, Revenant, Varriount, Voziv, Wallbraker, Zaneo,
     #mcc on Esper.net, HyveBuild/iCraft team, MinerCPP team, OpenCraft team.
 
-And thank You for using fCraft!
+And thank You for using hCraft!

@@ -28,23 +28,23 @@ using System.IO;
 using System.Net;
 using System.Text;
 using System.Threading;
-using fCraft.Events;
+using hCraft.Events;
 
-namespace fCraft.ServerCLI {
+namespace hCraft.ServerCLI {
     static class Program {
         static bool useColor,
                     exitOnShutdown = true;
 
 
         static void Main( string[] args ) {
-            // Check fCraft.dll version
+            // Check hCraft.dll version
             if( typeof( Server ).Assembly.GetName().Version != typeof( Program ).Assembly.GetName().Version ) {
-                Console.Error.WriteLine( "fCraft.dll version does not match ServerCLI.exe version." );
+                Console.Error.WriteLine( "hCraft.dll version does not match ServerCLI.exe version." );
                 Environment.ExitCode = (int)ShutdownReason.FailedToInitialize;
                 return;
             }
 
-            Console.Title = "fCraft " + Updater.CurrentRelease.VersionString + " - starting...";
+            Console.Title = "hCraft " + Updater.CurrentRelease.VersionString + " - starting...";
 
             Logger.Logged += OnLogged;
             Heartbeat.UriChanged += OnHeartbeatUriChanged;
@@ -59,7 +59,7 @@ namespace fCraft.ServerCLI {
                 Server.InitServer();
 
                 CheckForUpdates();
-                Console.Title = "fCraft " + Updater.CurrentRelease.VersionString + " - " +
+                Console.Title = "hCraft " + Updater.CurrentRelease.VersionString + " - " +
                                 ConfigKey.ServerName.GetString();
 
                 if( !ConfigKey.ProcessPriority.IsBlank() ) {
@@ -75,7 +75,7 @@ namespace fCraft.ServerCLI {
                 Console.CancelKeyPress += OnCancelKeyPress;
 
                 if( Server.StartServer() ) {
-                    Console.WriteLine( "** Running fCraft version {0}. **", Updater.CurrentRelease.VersionString );
+                    Console.WriteLine( "** Running hCraft version {0}. **", Updater.CurrentRelease.VersionString );
                     Console.WriteLine( "** Server is now ready. Type /Shutdown to exit safely. **" );
 
                     while( !Server.IsShuttingDown ) {
@@ -153,7 +153,7 @@ namespace fCraft.ServerCLI {
 
 
         static void ReportFailure( ShutdownReason reason ) {
-            Console.Title = String.Format( "fCraft {0} {1}", Updater.CurrentRelease.VersionString, reason );
+            Console.Title = String.Format( "hCraft {0} {1}", Updater.CurrentRelease.VersionString, reason );
             if( useColor ) Console.ForegroundColor = ConsoleColor.Red;
             Console.Error.WriteLine( "** {0} **", reason );
             if( useColor ) Console.ResetColor();
@@ -253,7 +253,7 @@ namespace fCraft.ServerCLI {
             UpdaterResult update = Updater.CheckForUpdates();
             if( !update.UpdateAvailable ) return;
 
-            Console.WriteLine( "** A new version of fCraft is available: {0}, released {1:0} day(s) ago. **",
+            Console.WriteLine( "** A new version of hCraft is available: {0}, released {1:0} day(s) ago. **",
                                update.LatestRelease.VersionString,
                                update.LatestRelease.Age.TotalDays );
             if( updaterMode != UpdaterMode.Notify ) {

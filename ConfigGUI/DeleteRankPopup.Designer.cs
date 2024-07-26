@@ -1,4 +1,4 @@
-﻿namespace fCraft.ConfigGUI {
+﻿namespace hCraft.ConfigGUI {
     partial class DeleteRankPopup {
         /// <summary>
         /// Required designer variable.

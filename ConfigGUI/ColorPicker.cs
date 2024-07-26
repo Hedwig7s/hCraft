@@ -1,8 +1,8 @@
-﻿// Part of fCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
+﻿// Part of hCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace fCraft.ConfigGUI {
+namespace hCraft.ConfigGUI {
     internal sealed partial class ColorPicker : Form {
         public static readonly Dictionary<int, ColorPair> ColorPairs = new Dictionary<int, ColorPair>();
         public int ColorIndex;

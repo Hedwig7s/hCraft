@@ -59,7 +59,7 @@
  Fix: Players who were added to the database manually now correctly have FirstLoginDate and ID set on first login.
  Change: MapRenderer/MapConverter: Now only allow either one directory, or one-or-more files to be specified. Multiple directories, and mixed directories/files are no longer allowed.
  Change: MapRenderer/MapConverter: Disabled slow fallback conversion by default (which caused non-map files to take forever to skip in recursive mode). Old behavior can be reenabled with --tryhard flag.
- Change: When auto-updating or restarting under Mono, fCraft no longer tries to use "mono-sgen", now just using "mono" and assuming that runtime is properly configured.
+ Change: When auto-updating or restarting under Mono, hCraft no longer tries to use "mono-sgen", now just using "mono" and assuming that runtime is properly configured.
  Change: /WBuild and /WAccess can optionally now take "@" in front of rank name.
  Change: Removed BackupOnJoin config key.
  Change: UpdateInstaller's --restart parameter is more flexible.
@@ -89,7 +89,7 @@
  Fix: Fixed some emotes getting trimmed from /Say, /Me, and /Staff (thanks Intertoothh)
  Fix: Fixed RestartInterval starting two chat timers (thanks Hellenion)
  Fix: Fixed ServerCLI using console colors for the first few messages even if --noconsolecolor was given (thanks Hellenion)
- Change: Added --noupdater command line switch, which stops fCraft from launching update installer binaries (although all other update-related behavior remains the same)
+ Change: Added --noupdater command line switch, which stops hCraft from launching update installer binaries (although all other update-related behavior remains the same)
  Change: Player's own name is no longer considered in autocompletion/searches for commands that are not applicable to self (e.g. /ban, /mute, /ignore, /tp, etc)
  Change: Logged global chat messages now have "(global)" prepended before player's name.
  API: Updated trunk project files to VisualStudio 2010. Target runtime remains .NET 3.5 Client Profile.
@@ -121,7 +121,7 @@
  Fix: Fixed IRC bot sometimes producing messages that are a couple characters over the IRC message size limit (512 chars).
  Fix: Fixed players being able to use newline codes (&N/&n) on IRC.
  Fix: Fixed problems with UpdaterMode and BackupOnStartup settings in ConfigGUI.
- Fix: Fixed fCraft not building in DEBUG_IRC configuration.
+ Fix: Fixed hCraft not building in DEBUG_IRC configuration.
  Change: Symbolic color codes (e.g. %S) can now be used in chat.
  Change: Backslash can now be used to escape percent color codes (e.g. \%C).
  Change: Server.StartServer will now retry looking up the external IP up to 3 times.
@@ -185,7 +185,7 @@
  Fix: Fixed a potential crash in Paths.FileExists when working in case-sensitive mode in a root directory.
  Fix: Fixed ConfigGUI not loading permission limits properly (thanks recon_).
  Fix: Added missing fake connection message when using non-silent /Unhide (thanks Wundsalz).
- Change: Improvements to fCraft's built-in crash reporter.
+ Change: Improvements to hCraft's built-in crash reporter.
  Change: Blocks redone with /Redo are now flagged as "Redone" in /BlockInfo (instead of "UndoneSelf"), painted blocks as "Painted" (instead of "Manual, Replaced").
  API: Many more documentation improvements.
 
@@ -199,7 +199,7 @@
  Feature: Added /UndoAreaNot (/uan) and /UndoPlayerNot (/upn), which reverse changes made by everyone EXCEPT the given player(s).
  Feature: Added MapConverter and MapRenderer utilities.
  Feature: /CuboidW now supports optionally filling sides and center with different blocktypes, e.g. "/cw white blue red".
- Fix: Fixed ServerCLI launching the wrong fCraft binary after running the updater.
+ Fix: Fixed ServerCLI launching the wrong hCraft binary after running the updater.
  Fix: Fixed a missing warning in /Gen when map height is not a multiple of 16.
  Fix: Fixed a rare case of players receiving desynchronized copies of maps where draw commands are in progress.
  Fix: Fixed a crash in "/Commands <Category>"
@@ -239,7 +239,7 @@
  Change: If opening a link fails (from ConfigGUI or ServerGUI), the URL is copied to clipboard, instead of crashing.
  Change: "/Import bans" no longer prints a message for every player who's already banned, instead showing a total number of already-banned players at the end.
  Change: Added a missing "Copy" context menu to the ServerGUI's log box (thanks to Jonty800).
- Change: fCraft front-ends now check fCraft.dll's assembly version, and refuse to start if there is a mismatch (Thanks Zaneo).
+ Change: hCraft front-ends now check hCraft.dll's assembly version, and refuse to start if there is a mismatch (Thanks Zaneo).
 
 0.623
  Fix: Fixed a crash in /PasteX and /PasteNotX.
@@ -261,7 +261,7 @@
  Feature: Added {PLAYER_LIST} variable, for use in greetings/announcements/rules.
  Fix: Fixed changes to DefaultBackupInterval config key not being applied.
  Fix: Fixed /BanInfo showing "players on same IP" for players without a recorded IP address.
- Fix: Fixed fCraft occasionally using localized datetime and number formatting.
+ Fix: Fixed hCraft occasionally using localized datetime and number formatting.
  Fix: Fixed /Cut storing the selected blocks before checking player's draw limit (thanks ruggedbear).
  Fix: Fixed /Fill2D starting a selection even if command parameters could not be parsed (thanks David00143).
  Fix: Fixed /Copy and /Cut reporting incorrect origin information (thanks nope__avi).
@@ -349,7 +349,7 @@
 
 0.612
  Fix: Fixed "/Worlds @Rank" not autocompleting rank names.
- Fix: Fixed compatibility with legacy PlayerDB format versions. PlayerDB files created by fCraft 0.400+ will work again.
+ Fix: Fixed compatibility with legacy PlayerDB format versions. PlayerDB files created by hCraft 0.400+ will work again.
  Fix: Fixed several syntax problems and crashes in /Gen.
  Fix: Fixed a bug that reset a world's BackupInterval to default and IsLocked flag to false after changing the map.
  Fix: Fixed a bug that prevented kicks/bans/promotions/demotions from being announced on IRC if no reason was given.
@@ -371,7 +371,7 @@
  Fix: Fixed "/Commands @Rank" showing hidden commands (thanks Hellenion)
  Fix: Fixed a typo in /Worlds (thanks Kevinsweijen)
  Fix: Fixed BlockDBAutoEnable and BlockDBAutoEnableRank config keys being placed in the "General" section.
- Change: Improved config.xml format (now version 152). Configs created with fCraft 0.611+ will not be usable with older versions of fCraft.
+ Change: Improved config.xml format (now version 152). Configs created with hCraft 0.611+ will not be usable with older versions of hCraft.
  Change: Rewrote ServerGUI startup code to make it more responsive (thanks to 800craft for the idea).
  Change: Added information about command-line options to the README, and fixed some typos.
  Change: MaxConnectionsPerIP restriction no longer applies to localhost.
@@ -406,7 +406,7 @@
  Fix: Fixed typos in /ReplaceNot and /UndoArea.
  Change: Added a warning on startup if name verification is disabled.
  Change: Tweaks and improvements to /Info, /WInfo, /BanInfo, /SetInfo, and /Commands.
- Change: Removed code that tries next port if the given one could not be used. Now fCraft either starts on the port specified in config, or dies.
+ Change: Removed code that tries next port if the given one could not be used. Now hCraft either starts on the port specified in config, or dies.
  Change: Commands now complain about being given too many parameters (in addition to complaining about too few parameters). This should help catch mistyped commands.
  Change: Added an option to disable giant-tree generation in ConfigGUI's map generator.
  Change: Changed log format for bans/kicks to include more information, and fixed log message format for "Player ____ logged in from an IP shared by banned players..."
@@ -419,14 +419,14 @@
    - BlockDBEnabled defaults to "true"
    - WomEnableEnvExtensions defaults to "false"
    - IRCBotAnnounceServerEvents defaults to "true"
- Change: Discontinued ServerWinService (formerly fCraftWinService) subproject.
+ Change: Discontinued ServerWinService (formerly hCraftWinService) subproject.
  API: Improved Vector3I, Vector3F, and Position classes a bit.
  API: New events: DrawOperation.Beginning / Began / Ended
  API: Changed the way PlayerInfo stores empty string fields. Instead of a 0-length string, it now uses nulls.
  Optimization: Sped up PlayerDB loading/saving, and boolean ConfigKey lookup.
 
 0.604
- Feature: Added support for repeating previously-entered player and world names. Just put a dash (-) in place of the player/world name when using a command, and fCraft will fill in the most-recently-used name.
+ Feature: Added support for repeating previously-entered player and world names. Just put a dash (-) in place of the player/world name when using a command, and hCraft will fill in the most-recently-used name.
  Fix: Fixed an occasional SecurityController-related crash in /Gen, /WLoad, and ConfigGUI world editor.
  Fix: Fixed an very rare problem in /Shutdown and /Restart commands.
  Fix: Fixed a rare crash that only happened happened if: MaxPlayers>128, MaxPlayersPerWorld=128, main is full, AND connecting player has a reserved slot.
@@ -562,7 +562,7 @@
  Misc: Players who log out hidden will now log in silently, still hidden.
  Misc: More keywords are now usable in announcements, rules, and greeting files: {SERVER_NAME}, {MOTD}, {RANK}, {PLAYER_NAME}, {TIME}, {WORLD}, {PLAYERS}, and {WORLDS}
  Misc: Kicked or disconnected players no longer have their TotalTime increased for the time idled.
- Misc: fCraft will refuse to start up if running old versions of mono (2.4 or earlier).
+ Misc: hCraft will refuse to start up if running old versions of mono (2.4 or earlier).
  Misc: Crash reporter now prints a reference number for submitted reports.
  Misc: AutoRank now only evaluates online players on a timer. A full database sweep will only be done on startup or on-demand. This should notably reduce average CPU use on large databases.
  Misc: Added AutoRank pseudoplayer (similar to Console), who is now credited with all autorank promotions/demotions.
@@ -574,14 +574,14 @@
  Misc: Frozen players now have a little blue star appended to their names, similar to the red star for banned players.
  Misc: Moved all Heartbeat-related operations to the background thread (fixes lag spikes when minecraft.net times out).
  Misc: Added a dynamically updated compass at the top-right of the screen, visible to players who use WoM 1.8.8+
- Misc: Made fCraft.sln default to "Release" configuration when loaded.
+ Misc: Made hCraft.sln default to "Release" configuration when loaded.
  Misc: Added a check for libMonoPosix on server startup. This allows catching misconfigured Mono setups early.
  Misc: Ranks now default to "white" color ("&f") instead of "none" color ("").
  Misc: Edited the "failed to load main world" message to sound less menacing, since it's usually caused just by main world filling up.
  Misc: Sped up /PruneDB, /MassRank, map generation. Reduced memory use of draw commands, undo buffers, and ConfigTool.
  Misc Fix: Fixed "duplicate metadata key" warning in FCMv3 maps.
  Misc Fix: Fixed a zone-related race condition when exporting to Opticraft map format.
- Misc Fix: Fixed fCraft being unable to start if fCraft.dll is in the root directory of a drive (e.g. in "C:/")
+ Misc Fix: Fixed hCraft being unable to start if hCraft.dll is in the root directory of a drive (e.g. in "C:/")
  Misc Fix: Fixed a bug that caused bandwidth to sometimes be wasted on needlessly updating position of non-moving players.
  Misc Fix: Fixed a clock drift problem in periodic SchedulerTasks.
  Misc Fix: Fixed a case where, in some rank configurations, players would see themselves as offline when hidden (in /Info, /BInfo, /Players, etc).
@@ -613,7 +613,7 @@
  Zones Fix: Tightened security checks of /ZAdd and /ZRemove to prevent a permission exploit.
  API: Added specialized MetadataCollection class to manage per-map and per-player metadata, and ZoneCollection for zones.
  API: Added ReSharper-compatible annotations and more argument checks throughout the codebase.
- API: fCraft now consistently uses [X,Y,Z] for coordinates (where X/Y are horizontal, and Z is vertical), and [Width,Length,Height] for dimensions (Width/Length horizontal, Height vertical).
+ API: hCraft now consistently uses [X,Y,Z] for coordinates (where X/Y are horizontal, and Z is vertical), and [Width,Length,Height] for dimensions (Width/Length horizontal, Height vertical).
  API: Merged Session and Player classes. All session-related functionality is in Player.Networking.cs file.
  API: New line-wrapping algorithm provides better performance and safety. Now using "\n" instead of "&N" to force a newline.
  API: Renamed World.PlayerList to World.Players, Server.PlayerList to Server.Players, and added PlayerDB.PlayerInfoList
@@ -626,7 +626,7 @@
  API: CommandManager.RegisterCommand() now checks for reserved command names (currently "ok" and "nvm"), and does a better job at handling command name capitalization differences.
  API: Added ability to override Player.MaxBlockPlacementRange, Player.SocketTimeout, Heartbeat.Delay, and Heartbeat.Timeout.
  API: Renamed RankManager.ParseRank(string) to Rank.Parse(string)
- API: All draw/undo/copy/paste commands have been moved to fCraft.Drawing namespace.
+ API: All draw/undo/copy/paste commands have been moved to hCraft.Drawing namespace.
  API: Added support for multiple /help sections per command.
  API: Added CommandCategory.Debug, removed CommandDescriptor.HelpHander and HelpHandler delegate.
  API: Moved Server.Player* events to Player.* and Server.PlayerInfo* to PlayerInfo.*
@@ -680,7 +680,7 @@
  Change: Adjusted /dumpstats security checks, and made it require EditPlayerDB permission (instead of Import).
 
 0.531
- Feature: /sinfo now shows bandwidth use, fCraft version, and .NET/Mono version.
+ Feature: /sinfo now shows bandwidth use, hCraft version, and .NET/Mono version.
  Feature: Added ability to use coordinates with mark (e.g. "/mark 0 0 0").
  Fix: Fixed non-default rank settings not saving properly from ConfigTool.
  Fix: Fixed a serialization bug in IPBanList that happened if a ban reason was not given, or if an IP address was not associated with any player.
@@ -690,7 +690,7 @@
  Change: /version command has been removed due to redundancy with /sinfo.
  Change: Detailed reasons of player disconnects are now logged better.
  Change: Increased Minecraft.net heartbeat interval slightly.
- API: Added new events: Scheduler.TaskAdded, Scheduler.TaskExecuting, Scheduler.TaskExecuted, and Scheduler.TaskRemoved. These events are only available when fCraft.dll is built with DEBUG_SCHEDULER flag because of their performance impact.
+ API: Added new events: Scheduler.TaskAdded, Scheduler.TaskExecuting, Scheduler.TaskExecuted, and Scheduler.TaskRemoved. These events are only available when hCraft.dll is built with DEBUG_SCHEDULER flag because of their performance impact.
  Optimization: Removed the scheduler overhead from having unloaded worlds.
  Optimization: Sped up MapGenerator by about 10%.
 
@@ -698,7 +698,7 @@
  Feature: New adaptive bandwidth-saving mechanism for updating player positions, controlled by the new BandwidthUseMode config key.
  Feature: Added OptiCraft blocktype names and blocks' numeric IDs as aliases.
  Fix: Fixed block bindings not being applied to drawing commands.
- Fix: Fixed fCraft getting confused if worlds.xml contains duplicates.
+ Fix: Fixed hCraft getting confused if worlds.xml contains duplicates.
  Fix: Fixed "/" (repeat last command) not rewinding the command, which caused some issues with command arguments.
  Fix: Fixed "Max connections per IP" setting not saving in ConfigTool.
  Fix: Fixed AnnounceRankChangeReasons checkbox being erroneously tied to RequireRankChangeReasons key in ConfigTool.
@@ -742,7 +742,7 @@
  API: Renamed RankList to RankManager, and CommandList to CommandManager, for consistency.
 
 0.521
- Feature: Added a /clear command, to clear in-game chat. Also works from fCraftConsole and fCraftUI.
+ Feature: Added a /clear command, to clear in-game chat. Also works from hCraftConsole and hCraftUI.
  Fix: Added missing chat commands.
  Fix: Cosmetic fixes in /zremove.
 
@@ -757,20 +757,20 @@
  Feature: Replaced LimitOneConnectionPerIP config key (boolean) with a more flexible MaxConnectionsPerIP (int).
  Feature: Added /bringall command, for moving everyone (or only certain ranks) from your world (or optionally all worlds, or a list of other worlds) to your location.
  Feature: /bring can be limited per-rank
- Feature: When file is not found on case-sensitive filesystems, fCraft tries to syggest similar filenames.
+ Feature: When file is not found on case-sensitive filesystems, hCraft tries to syggest similar filenames.
  Feature: Added new constants to use in greeting.txt: {TIME}, {PLAYER_NAME}, {WORLD}, {PLAYERS}, {WORLDS}, {MOTD}
  Feature: Improved compatibility with SurvivalTest clients.
  Fix: Fixed /banip not kicking other players from the same IP (besides the named player)
  Fix: Added missing blocktype validation to MapFCMv2, MapFCMv3, MapMyne, and MapNBT.
- Fix: Fixed a rare shutdown crash in fCraftUI.
+ Fix: Fixed a rare shutdown crash in hCraftUI.
  Fix: Improved the way PlayerDB.Load handles errors in individual records. A single corrupted entry will no longer prevent the rest from loading.
- Fix: Fixed fCraftUI abruptly quitting on crash / failure to start, instead of showing the error message. Use "--exitoncrash" command-line switch to reproduce old behavior.
+ Fix: Fixed hCraftUI abruptly quitting on crash / failure to start, instead of showing the error message. Use "--exitoncrash" command-line switch to reproduce old behavior.
  Fix: Fixed ConfigTool's World tab not prompting to delete map files when deleting worlds.
  Fix: Fixed a bug in MCSharp importer (#3281305)
  Fix: Fixed a list of permissions in /rinfo not being sorted.
  Fix: Fixed /mute rank limit dropdown sometimes getting out of sync.
  Fix: Fixed IRC bot redundantly announcing kicks when someone has been banned.
- Fix: Fixed a bug where fCraft would fail to start if PlayerDB.txt was truncated/empty.
+ Fix: Fixed a bug where hCraft would fail to start if PlayerDB.txt was truncated/empty.
  Change: Moved "IP" config key from General to Advanced.
  Change: Added /spin as an alias to /rotate (for MCLawl users)
  API: New events: PlayerClicking, PlayerClicked, PlayerPlacingBlock, PlayerPlacedBlock, PlayerListChanged, PlayerBeingKicked, PlayerKicked
@@ -786,33 +786,33 @@
  Fix: Made Mono version detection less crashy (#3267476, thanks to Hellenion again)
  Fix: Fixed MapUtility.LoadHeader terminating early, before going through all fallback converters.
  Fix: Fixed ConfigTool tab order.
- Fix: Fixed fCraft reporting inaccurate CPU usage figures.
+ Fix: Fixed hCraft reporting inaccurate CPU usage figures.
  Fix: Fixed a NullReferenceException in /rank if an invalid player name was given.
- Fix: Fixed fCraft project not building under Windows if path contains spaces.
+ Fix: Fixed hCraft project not building under Windows if path contains spaces.
  Change: Added "/serverreport" as an alias for "/sinfo"
- Change: Improved the way fCraft handles and reports map loading errors.
+ Change: Improved the way hCraft handles and reports map loading errors.
  API Change: Moved all filename constants (e.g. "PlayerDB.txt") to Paths class.
 
 0.511
- Feature: Further improvements to Mono support. fCraft will now utilize mono-sgen whenever possible.
- Fix: Fixed fCraftUI ignoring command-line arguments.
+ Feature: Further improvements to Mono support. hCraft will now utilize mono-sgen whenever possible.
+ Fix: Fixed hCraftUI ignoring command-line arguments.
  Fix: Fixed broken /paste and /pastenot volume checks.
  Fix: Fixed crash reports failing to submit.
  Fix: Fixed a timezone-related bug that messed up players' "total time on server" stat.
  Change: Added a warning if running on old versions of Mono (2.6 or lower). 
 
 0.510_r489
- Fix: Fixed unnecessary GDI+ dependence in fCraftConsole under Mono
+ Fix: Fixed unnecessary GDI+ dependence in hCraftConsole under Mono
  Fix: Fixed EnumKeyAttribute not taking blank values (as in case of ProcessPriority config key).
 
 0.510
- Feature: The fCraft updater has been rewritten and expanded. It now works under all OSes, and provides more features.
- Feature: fCraft now handles differences between case-sensitive and case-insensitive filesystems much better. /wrename and /wload are also aware of the filesystem.
- Feature: fCraft now checks presence, filename capitalization, and integrity of all map files on the world list at startup.
+ Feature: The hCraft updater has been rewritten and expanded. It now works under all OSes, and provides more features.
+ Feature: hCraft now handles differences between case-sensitive and case-insensitive filesystems much better. /wrename and /wload are also aware of the filesystem.
+ Feature: hCraft now checks presence, filename capitalization, and integrity of all map files on the world list at startup.
  Feature: New ConfigTool settings for updater, checkbox for showing "player connected/left" messages, and "/mute" permission settings.
  Feature: Added "/credits" command to ConfigUI.
- Feature: Implemented "--norestart" and "--exitoncrash" command-line switches for fCraft.
- Feature: fCraft event system is being rewritten with modding support in mind.
+ Feature: Implemented "--norestart" and "--exitoncrash" command-line switches for hCraft.
+ Feature: hCraft event system is being rewritten with modding support in mind.
  Feature: Improved MCSharp/MCZall/MCLawl map support.
  Fix: Software errors that happen while parsing player and console commands will no longer cause disconnects/crashes.
  Fix: IPBanList will attempt to recover records lost due to a recent regression in 0.505.
@@ -832,18 +832,18 @@
  Fix: Added missing /paste and /pastenot volume checks.
  Fix: Fixed a bug in /zinfo that showed incorrect creation/editing times.
  Fix: Better error messages for unrecognized block names in command parameters.
- Fix: /restart now works from ConfigUI under Mono (but still broken in fCraftConsole).
+ Fix: /restart now works from ConfigUI under Mono (but still broken in hCraftConsole).
  Fix: Fixed handling of command-line arguments surrounded with quotes.
  Fix: Fixed a bug at ConfigTool.ConfigUI.xAllowSecurityCircumvention_CheckedChanged (#3181907, thanks to clhdrums87).
  Fix: Fixed /winfo counting hidden players (#3237877, thanks to Hellenion).
  Fix: Fixed MCSharp map exporter mixing up map dimensions (#3159501, thanks to dogwatch).
- Change: Improved the way fCraft project is built. Now all binaries are copied to /trunk/bin/Release or /trunk/bin/Debug.
+ Change: Improved the way hCraft project is built. Now all binaries are copied to /trunk/bin/Release or /trunk/bin/Debug.
  Change: Improved error tolerance of Scheduler.EndShutdown().
  Change: Expanded Logger.CheckForCommonErrors().
  Change: Renamed config keys (old ones can still be loaded): IRCBot to IRCBotEnabled, AutomaticUpdates to UpdaterMode.
  Change: Added /wadd as an alias for /wload.
- Change: Renamed Mcc namespace to fCraft.MapConversion.
- Change: Decreased timeout for fCraft update check.
+ Change: Renamed Mcc namespace to hCraft.MapConversion.
+ Change: Decreased timeout for hCraft update check.
  Change: Added a confirmation prompt to /rank when adding an unrecognized player name to the database.
  Optimization: Sped up heartbeat sending and world-related operations, increased world saving interval to 90 seconds, reduced per-player idle CPU usage, halved CPU usage of draw commands.
 
@@ -902,7 +902,7 @@
 
 0.500
  Commands: Added /line drawing command, kindly contributed by SystemX17
- Commands: Added /restart command, to restart the server remotely (NOTE: does not work for fCraftWinService yet)
+ Commands: Added /restart command, to restart the server remotely (NOTE: does not work for hCraftWinService yet)
  Commands: Added /unmute command (same as "/mute name 0")
  Commands: Added an option to silently hide (no disconnect/connect message).
  Commands: Added /ignore and /unignore commands to block chat from another player (for the duration of your visit).
@@ -922,8 +922,8 @@
  ConfigTool: Added ability to customize MeColor (for /me messages, default: purple) and WarningColor (for major errors/warnings, default: red) in config.
  ConfigTool: AddWorldPopup can now show detailed info for maps of all supported formats.
  ConfigTool: Improved tooltips for several items in ConfigUI.
- FrontEnd: Uncaught exceptions that happen while executing commands from fCraftUI console are now handled by the crash reporter (instead of actually crashing).
- FrontEnd: Added /clear command for fCraftUI and fCraftConsole - clears log screen.
+ FrontEnd: Uncaught exceptions that happen while executing commands from hCraftUI console are now handled by the crash reporter (instead of actually crashing).
+ FrontEnd: Added /clear command for hCraftUI and hCraftConsole - clears log screen.
  FrontEnd: The URL is no longer highlighted after first heartbeat, to avoid stealing focus from console.
  Generator: Fixed "flatgrass" template
  Generator: Fixed alphabetical order in the list of templates
@@ -943,7 +943,7 @@
  Maps: Improved resilience for loading maps with unknown blocktypes. Instead of failing, it just replaces any unknown blocks with air.
  Maps: Added consistent header validation to all map format loaders.
  Maps: Fixed maps not autosaving when zones are added or removed.
- Maps: Zone definitions are now serialized to XML. Zones saved with this revision of fCraft will no longer be readable by older version of fCraft.
+ Maps: Zone definitions are now serialized to XML. Zones saved with this revision of hCraft will no longer be readable by older version of hCraft.
  Maps: Fixed a bug when loading JTE's format maps.
  Maps: Fixed format of backup filenames.
  PlayerDB: Added new fields: bannedUntil, frozenOn, frozenBy, mutedUntil, mutedBy, IRCPassword, online, leaveReason
@@ -965,12 +965,12 @@
  Stability: Made crash reporting more reliable. A failed crash report will no longer prevent error message from being logged and displayed.
  Stability: Fixed a crash in AddWorldPopup if dialog is closed while a map is still loading.
  Stability: To improve compatibility with some bots, removed "almost there..." message on the loading screen
- Stability: Disabled error reporting of common non-fCraft-related errors (like wrong runtime versions, or wrong Mono permissions).
+ Stability: Disabled error reporting of common non-hCraft-related errors (like wrong runtime versions, or wrong Mono permissions).
  Stability: Added "libMonoPosixHelper.so" and "UnauthorizedAccessException" to Logger.CheckForCommonErrors, and made "Could not load file or assembly" check locale-independent.
  Stability: A backup file is now created whenever PlayerDB, IP ban list, config, or world list are saved (e.g. PlayerDB.txt.backup)
  Stability: Crash reporter now sends last 25 lines of the log.
  Stability: Added a fallback overload for Player.Message() that bypasses string format, to make the whole thing less prone to format errors.
- System: fCraft now takes command-line arguments (at startup) to override the following:
+ System: hCraft now takes command-line arguments (at startup) to override the following:
  - working directory (--path=/your/path/here)
  - log directory (--logpath=/your/path/here)
  - map directory (--logpath=/your/path/here) - also overridable in a more user-friendly way via ConfigTool (MapPath key)
@@ -992,9 +992,9 @@
  System: Fixed unnecessary confirmation being asked when world name matches file name in /wload
  System: Eliminated the heartbeat thread by switching to async i/o.
  System: Improved startup and shutdown speed.
- System: Added a "how to promote yourself" message for fresh installations of fCraft.
+ System: Added a "how to promote yourself" message for fresh installations of hCraft.
  System: Fixed Server.OnPlayerDisconnected event firing for unregistered sessions.
- System: Made Color.Parse() and Color.GetName() translate fCraft-specific color assignments (e.g "&S" for "System")
+ System: Made Color.Parse() and Color.GetName() translate hCraft-specific color assignments (e.g "&S" for "System")
  System: Added better detection for SMP/Alpha clients trying to connect.
  System: Sped up AutoRankAll
 
@@ -1031,7 +1031,7 @@
  Change: Organized MapGeneratorArgs and added serialization/deserialization for all the new options.
 
 0.496
- Fix: Fixed File.Replace() failing if fCraft was set up on a partition/volume other than the one where temp folder is.
+ Fix: Fixed File.Replace() failing if hCraft was set up on a partition/volume other than the one where temp folder is.
  Fix: Added missing tooltip for "Edit Greeting"
  Fix: Fixed /sinfo including hidden players in the player count.
 
@@ -1066,14 +1066,14 @@
  Fix: Fixed per-rank draw limits not being calculated correctly in some cases.
  Fix: Replaced File.Delete/File.Move calls with a more reliable File.Replace call. This should slightly improve reliability of map/playerdb.txt/ipbans.txt/worlds.xml saving.
  Fix: Fixed a little ConfigTool bug that did not properly reset PatrolledRank after a rank deletion.
- Fix: Fixed terminal colors not resetting in fCraftConsole after a fatal crash under Mono.
- Fix: Fixed detached "Play" button in fCraftUI.
- Fix: Added some basic error reporting to fCraftWinService.
+ Fix: Fixed terminal colors not resetting in hCraftConsole after a fatal crash under Mono.
+ Fix: Fixed detached "Play" button in hCraftUI.
+ Fix: Added some basic error reporting to hCraftWinService.
  Change: Tweaked AddWorldPopup layout to accommodate more options.
 
 0.493
  Feature: /info now supports autocompletion, wildcards, and IP search.
- Feature: Experimental service wrapper for fCraft.
+ Feature: Experimental service wrapper for hCraft.
  Feature: Added more editable properties to /setinfo: RankChangeType, BanReason, UnbanReason, RankChangeReason, LastKickReason
  Feature: Various improvements to /info, including hide-aware "online" indicator.
  Feature: Made Player.NoAccessMessage() print the minimum required rank, instead of just permission name(s).
@@ -1085,7 +1085,7 @@
  Fix: Fixed PlayerDB.Save() not escaping LastKickReason 
  Fix: Cleaned up extra messages sent by /unhide.
  Fix: Fixed LastSeen not updating on-login (only on-logout).
- Fix: Improved the way fCraft checks for ghost/leftover sessions. Thanks to wootalyzer.
+ Fix: Improved the way hCraft checks for ghost/leftover sessions. Thanks to wootalyzer.
  Fix: If a player's name starts with a number, and you try to /tp to a coordinate that starts with the same number, you are no longer teleported to that player instead.
  Fix: Fixed hidden players being detectable by checking LastSeen in /info.
  Fix: To avoid performance degradation, GC calls have been centralized, delayed, limited to 1/minute, and moved to the tasks thread.
@@ -1164,7 +1164,7 @@
  Fix: Fixed a recursion loop in NoWorldMessage()
  Fix: Fixed help entries for /setspawn and /shutdown
  Fix: Fixed potential crash in Server.Shutdown() if called after failed initialization/startup.
- Fix: Fixed potential deadlock/freeze in fCraftUI on shutdown.
+ Fix: Fixed potential deadlock/freeze in hCraftUI on shutdown.
  Change: Improved crash reporting for TargetInvokationException and TypeInitializerException errors.
  Change: All assemblies are now once again x86/x86_64/IA64 compatible.
  Change: Server.OnPlayerConnected event now supports cancellation.
@@ -1203,7 +1203,7 @@
  Fix: Fixed /reloadconfig not changing several variables (like colors).
  Fix: Fixed antigrief defaulting to 35/5 (instead of unmetered).
  Fix: Fixed heartbeat counting hidden players.
- Fix: Fixed a rare ObjectDisposedException crash on shutdown when running fCraftUI.
+ Fix: Fixed a rare ObjectDisposedException crash on shutdown when running hCraftUI.
  Change: Added a more informative disconnect message to players connecting with Alpha client.
  Change: Improved the way player disconnects are handled to be more reliable, and to drop disconnected players sooner.
  Change: Improved the way PlayerDB saving is triggered. New schedule reduces overall disk use and reduces possible data loss in case of crashes.
@@ -1216,7 +1216,7 @@
  Feature: Changed all "player classes" terminology to "ranks" for consistency with other servers. Several commands have been renamed to reflect that: /classes to /ranks, /user to /rank, /class to /rankinfo. All rank-related messages have also been updated.
  Feature: Added "Raise"/"Lower" buttons to Ranks tab in ConfigTool, and made some other adjustments to the tab. You no longer need to assign a "rank" number to reorder ranks.
  Fix: Fixed a crash in ConfigTool that happened if classes were added/renamed/deleted while PatrolledClass was not set.
- Fix: Improved fCraftUI responsiveness on-startup.
+ Fix: Improved hCraftUI responsiveness on-startup.
  Fix: Fixed several cases of Worlds tab going out-of-sync with the ranks tab.
  Fix: /wremove now always saves the map before unloading.
  Fix: Fixed Console being affected by chat spam/flood checks.
@@ -1294,7 +1294,7 @@
  Change: ConfigTool fields now provide better feedback if validation fails.
  Change: Changed heartbeat interval to 40 seconds (down from 50).
  Change: Added a special error handler for rare/impossible case of mainWorld not being joinable.
- Change: Made fatal error messages in fCraftConsole print in red. Better color support coming soon.
+ Change: Made fatal error messages in hCraftConsole print in red. Better color support coming soon.
 
 0.470
  Feature: Personal zones - per-zone whitelist and blacklist of individual players. The lists can now be defined with /zadd and edited with /zedit.
@@ -1361,7 +1361,7 @@
  Optimization: BlockUpdate memory usage slightly reduced.
 
 0.455
- Feature: AutoLauncher (BETA) allows restarting the fCraftConsole server if it crashed. Although it honestly shouldn't crash at all!
+ Feature: AutoLauncher (BETA) allows restarting the hCraftConsole server if it crashed. Although it honestly shouldn't crash at all!
  Fix: Allowed renaming worlds in cases where only capitalization is different.
  Fix: If an ip-banned player has more than one connection, all connections are now terminated.
  Fix: Fixed nonrectangular MCSharp maps getting messed up by the loader.
@@ -1402,7 +1402,7 @@
  Optimization: Slightly reduced memory usage of massive drawing commands (over undo limit).
 
 0.451
- Feature: Improved the way fCraft handles fatal errors (crashes). Crash logs are now created more reliably.
+ Feature: Improved the way hCraft handles fatal errors (crashes). Crash logs are now created more reliably.
  Feature: Added automated crash reporting to fragmer.net (opt-out).
  Feature: Added an announcement for players logging in from IPs associated with other previously-banned players.
  Fix: Curved braces - "{}" - in server name no longer cause problems.
@@ -1442,7 +1442,7 @@
  Feature: Added more customization options for colors: PrivateMessageColor and IRCMessageColor in Config.
  Feature: /players list is now sorted alphabetically.
  Feature: Added "Check Port" button to ConfigTool to see if port is open. Uses www.utorrent.com/testport
- Feature: Added "Play" button to fCraftUI to open server URL in the browser
+ Feature: Added "Play" button to hCraftUI to open server URL in the browser
  Feature: World names in /worlds list are now colored according to each world's build permission. 
  Feature: Added speedhack detection & prevention (BETA) and corresponding Permission.UseSpeedHack. All your classes will be granted this permission by default. Edit the config to customize it.
  Fix: When using /mark outside of map boundaries, draw limits are no longer calculated incorrectly (thanks to Darnest).
@@ -1607,7 +1607,7 @@
  Change: Added a catch-all exception handler into Server.MainLoop
  Change: Added exception handlers for EVERY single piece of code that requires file access
  Change: Added more thread safety in MapCommands.WorldRename that resolves a potential race condition with Map.Save
- Change: Modified IPBanList to use the standard temp folder (instead of fCraft working path) for its temp files
+ Change: Modified IPBanList to use the standard temp folder (instead of hCraft working path) for its temp files
 
 
 0.424
@@ -1622,11 +1622,11 @@
 
 0.423
  Feature: /importbans now also supports "banned-ip.txt"
- Feature: Logs are now stored in /logs/ folder. Your fCraft.log file will be moved there automatically and renamed to "_OldLog.log"
+ Feature: Logs are now stored in /logs/ folder. Your hCraft.log file will be moved there automatically and renamed to "_OldLog.log"
  Feature: Log splitting now works by day or by session. Set "LogMode" key in config.xml or see Logging tab in ConfigTool.
- Feature: All maps are now stored in /maps/ folder. Your map files will be moved automatically first time you start ConfigTool/fCraftConsole/fCraftUI
+ Feature: All maps are now stored in /maps/ folder. Your map files will be moved automatically first time you start ConfigTool/hCraftConsole/hCraftUI
  Feature: Reserved slots now work
- Fix: Fixed a bug in fCraft.Server.LoadWorldListXML that could make all worlds hidden.
+ Fix: Fixed a bug in hCraft.Server.LoadWorldListXML that could make all worlds hidden.
  Fix: "player connected" message shown when someone connects, instead of just "player joined world"
  Fix: "player left the server" message is not shown if the player got kicked before LoginSequence finished (e.g. if server was full)
  Fix: Added back IP logging for incoming connections
@@ -1635,7 +1635,7 @@
  Fix: Removed references to old "/drawundo" command name in "/undo" messages
  Fix: Fixed "Unrecognized entry ignored: LegacyRankMapping =" warning
  Change: Made /importbans and /importranks save PlayerDB at once
- Change: fCraft now forcibly resets its working directory to the same path where the executable is
+ Change: hCraft now forcibly resets its working directory to the same path where the executable is
  Change: Removed "delete old file?" prompt when renaming worlds in AddWorldPopup. Now it just does it, to match tabWorlds' DataGridView behavior
  Change: Added additional error checks to Map.Backup() 
 
@@ -1658,9 +1658,9 @@
  Fix: Fixed startup errors not being logged if config.xml has not been parsed yet
  Fix: Fixed ConfigUI input box not aligning properly when window is resized
  Fix: Fixed "flatgrass" generated maps being 1 block off vertically
- Change: Updated PlayerDB and IPBanList to use standard temporary folder (instead of dumping temp files into fCraft directory)
+ Change: Updated PlayerDB and IPBanList to use standard temporary folder (instead of dumping temp files into hCraft directory)
  Change: Added "logging starts" marker that's written to console and log on-startup
- Change: fCraftUI log now displays the last 2000 lines (up from 1000 lines)
+ Change: hCraftUI log now displays the last 2000 lines (up from 1000 lines)
 
 
 0.420
@@ -1670,9 +1670,9 @@
  Feature: Added LimitOneConnectionPerIP option to config & configtool
  Feature: Worlds can now be hidden from the /worlds list
  Feature: Added /whois command for checking if a player is using real name or nickname. BE CAREFUL WITH "ChangeName" PERMISSION!
- Feature: fCraft now generates crash.txt on unhandled fatal errors
+ Feature: hCraft now generates crash.txt on unhandled fatal errors
  Feature: Implemented theme support, and added 2 new terrain types (Coast and River) for MapGenerator. See "/help gen" for details, or use ConfigTool.
- Feature: Pressing Up/Down keys in fCraftUI will show previously typed commands.
+ Feature: Pressing Up/Down keys in hCraftUI will show previously typed commands.
  Fix: Fixed a bug in /wmain and /wload that sometimes made the server unconnectable after changing map
  Fix: Limits on the /kick command now apply correctly
  Fix: Fixed /wbuild and /waccess showing wrong messages
@@ -1682,7 +1682,7 @@
  Fix: Fixed /lava checking PlaceWater permission instead of PlaceLava
  Fix: A debug message about "attempting to unregister an non-existent player" is no longer logged every time VerifyNames fails
  Fix: When using /where command on other players, correct coordinates are now shown]
- Fix: Player's classes are now updated in fCraftUI list when promoted/demoted
+ Fix: Player's classes are now updated in hCraftUI list when promoted/demoted
  Fix: PMs are now logged as LogType.PrivateChat (instead of generic LogType.WorldChat)
  Fix: /hide and /unhide now use Color.Sys instead of hardcoded Color.Yellow
  Fix: Player's nicknames (as set by /nick) are applied correctly and preserved when changing worlds
@@ -1702,7 +1702,7 @@
  Change: Centered all ConfigTool popup windows (AddWorldPopup, ColorPicker, DeleteClassPopup, TextEditorPopup)
  Change: Hid unneeded icons and buttons from ConfigTool popups
  Change: Changed the way zones store rank restriction (as part of the compatibility assurance), and added versioning to zone definitions
- Change: Map.Save() now creates temporary files in the OS-specific temporary folder, not in same folder where fCraft is installed
+ Change: Map.Save() now creates temporary files in the OS-specific temporary folder, not in same folder where hCraft is installed
  Change: World permissions are now updated automatically when a class is deleted
  Refactor: Improved consistency in code naming conventions, especially in IRC code
  Refactor: Improved code organization in many areas
@@ -1732,7 +1732,7 @@
 0.405
  Added back support for vanilla (server_level.dat) maps.
  Fixed MCSharp importer leaving nonstandard blocks in the map, causing client crashes. Now all MCSharp-specific blocks are converted to normal types.
- Fixed visual player list not updating in fCraftUI.
+ Fixed visual player list not updating in hCraftUI.
  Added /players command to list ALL players on the server (in all worlds)
  Made the BlockType parameter optional for /cuboid and /ellipsoid. Now it takes blocktype of the second click (or last-previously-used-blocktype when using /mark) in the absence of the optional parameter.
  ConfigTool: Added a new tab for IRC setting.
@@ -1776,7 +1776,7 @@
 
 
 0.402
- Added back /load command, and hooked up MCC. Currenly supported: fCraft/fcm, MCSharp/lvl, indev/mclevel, MinerCPP and LuaCraft (dat). Vanilla support coming soon.
+ Added back /load command, and hooked up MCC. Currenly supported: hCraft/fcm, MCSharp/lvl, indev/mclevel, MinerCPP and LuaCraft (dat). Vanilla support coming soon.
  Fixed worlds being unloaded before all block updates are processed (thus aborting draw commands).
  Fixed several potential multiworld-related crashes and freezes.
  Made Server.UnregisterPlayer check ALL worlds to remove the player, not just most recent one.
@@ -1806,18 +1806,18 @@
 0.400
  *MULTIWORLD*. It's finally here. See /help for information on new commands: /worlds, /wload, /join
  Added a persistent world list, saved in worlds.txt - this is subject to change. The file contains a list of world names, each corresponding to an .fcm file. The first world listed at the top of worlds.txt is the default/main one.
- *IRC BOT*. Thanks to the efforts by Destroyer661, fCraft now has an optional IRC bot for relaying chat and commands.
+ *IRC BOT*. Thanks to the efforts by Destroyer661, hCraft now has an optional IRC bot for relaying chat and commands.
  A field has been added in the config to allow forwarding ALL IRC CHANNEL TRAFFIC to the server. This will override the prefix and make it inactive. 'IRCBotForwardAll' is set to false by default.
  *ZONES*. It is now possible to make guest zones and op zones (and anything in-between) on any map. See /help for information on new commands: /zones, /zone, /zremove.
  Added 2 new permissions: ManageZones and ManageWorlds. You might need to update your config.xml to add these permissions to appropriate classes.
  Added /compass command (aka /where).
  Fixed players sometimes not seeing their /kick message.
  Added a way to teleport to specific coordinates (/tp x y h)
- Fixed heartbeats timing out when running fCraft under Mono.
+ Fixed heartbeats timing out when running hCraft under Mono.
  Fixed Config.ApplyConfig setting the wrong server throttling variables.
  Fixed air blocks appearing underwater when using /gen
  Tweaked /gen parameters to make "island" a bit less ugly.
- Updated text in fCraftConsole.
+ Updated text in hCraftConsole.
 
 
 0.330
@@ -1832,7 +1832,7 @@
  Added an experimental low-latency mode (faster server response, but more bandwidth required).
  Improved hacking detection: added anti-chat-spam and anti-grief (block spam) checks.
  New more aggressive anti-hacking checks for incoming movement and SetTile packets.
- Fixed an issue with fCraftUI console log getting truncated in the wrong places.
+ Fixed an issue with hCraftUI console log getting truncated in the wrong places.
  Improved Mono compatibility (fixes HttpWebRequest failures).
 
 
@@ -1899,7 +1899,7 @@
 
 0.315
  Added visual color picker to ConfigTool
- Added lightweight console interface for fCraft
+ Added lightweight console interface for hCraft
  Refactored the main update loop
 
 

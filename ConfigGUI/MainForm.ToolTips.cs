@@ -1,6 +1,6 @@
-﻿// Part of fCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
+﻿// Part of hCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
 
-namespace fCraft.ConfigGUI {
+namespace hCraft.ConfigGUI {
     partial class MainForm {
 
         void FillToolTipsGeneral() {

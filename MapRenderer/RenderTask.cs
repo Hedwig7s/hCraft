@@ -1,7 +1,7 @@
-﻿// Part of fCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
+﻿// Part of hCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
 using System;
 
-namespace fCraft.MapRenderer {
+namespace hCraft.MapRenderer {
     /// <summary> Holds all information related to a single map-rendering task. </summary>
     class RenderTask {
         public Byte[] Result { get; set; }

@@ -1,8 +1,8 @@
-﻿// Part of fCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
+﻿// Part of hCraft | Copyright (c) 2009-2014 Matvei Stefarov <me@matvei.org> | BSD-3 | See LICENSE.txt
 using System;
 using System.Windows.Forms;
 
-namespace fCraft.ConfigGUI {
+namespace hCraft.ConfigGUI {
     static class Program {
         [STAThread]
         static void Main() {
@@ -16,7 +16,7 @@ namespace fCraft.ConfigGUI {
             } catch( Exception ex ) {
                 Logger.LogAndReportCrash( "Error in ConfigGUI", "ConfigGUI", ex, true );
                 if( !Server.HasArg( ArgKey.ExitOnCrash ) ) {
-                    MessageBox.Show( ex.ToString(), "fCraft ConfigGUI has crashed" );
+                    MessageBox.Show( ex.ToString(), "hCraft ConfigGUI has crashed" );
                 }
             }
 #endif

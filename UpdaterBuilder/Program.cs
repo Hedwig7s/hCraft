@@ -1,13 +1,13 @@
 ﻿using System.IO;
 using System.IO.Compression;
 
-namespace fCraft.UpdateBuilder {
+namespace hCraft.UpdateBuilder {
     static class Program {
 
         static readonly string[] FileList = {
             "ConfigGUI.exe",
-            "fCraft.dll",
-            "fCraftGUI.dll",
+            "hCraft.dll",
+            "hCraftGUI.dll",
             "ServerCLI.exe",
             "ServerGUI.exe",
             "MapConverter.exe",

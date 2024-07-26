@@ -29,13 +29,13 @@ using System.Reflection;
 using System.Threading;
 using System.Linq;
 using System.Xml.Linq;
-using fCraft.UpdateInstaller.Properties;
+using hCraft.UpdateInstaller.Properties;
 
 
-namespace fCraft.UpdateInstaller {
+namespace hCraft.UpdateInstaller {
     static class Program {
         const string ConfigFileNameDefault = "config.xml",
-                     BackupFileNameFormat = "fCraftData_{0:yyyyMMdd'_'HH'-'mm'-'ss}_BeforeUpdate.zip";
+                     BackupFileNameFormat = "hCraftData_{0:yyyyMMdd'_'HH'-'mm'-'ss}_BeforeUpdate.zip";
 
         public const string DataBackupDirectory = "databackups";
 
@@ -47,10 +47,10 @@ namespace fCraft.UpdateInstaller {
         };
 
         static readonly string[] LegacyFiles = new[]{
-            "fCraftConsole.exe",
-            "fCraftUI.exe",
+            "hCraftConsole.exe",
+            "hCraftUI.exe",
             "ConfigTool.exe",
-            "fCraftWinService.exe"
+            "hCraftWinService.exe"
         };
 
 
@@ -101,7 +101,7 @@ namespace fCraft.UpdateInstaller {
                     }
                 }
             } catch( Exception ex ) {
-                Console.Error.WriteLine( "Error reading fCraft config: {0}", ex );
+                Console.Error.WriteLine( "Error reading hCraft config: {0}", ex );
             }
 
             // Backup data files (if requested)
@@ -138,7 +138,7 @@ namespace fCraft.UpdateInstaller {
 
                             } catch( Exception ex ) {
                                 if( ex is IOException ) {
-                                    Console.WriteLine( "Waiting for fCraft-related applications to close..." );
+                                    Console.WriteLine( "Waiting for hCraft-related applications to close..." );
                                 } else {
                                     Console.Error.WriteLine( "ERROR: could not write to {0}: {1} - {2}",
                                                              fileName, ex.GetType().Name, ex.Message );
@@ -186,9 +186,9 @@ namespace fCraft.UpdateInstaller {
                 }
             }
 
-            Console.WriteLine( "fCraft update complete." );
+            Console.WriteLine( "hCraft update complete." );
 
-            // Restart fCraft (if requested)
+            // Restart hCraft (if requested)
             if( restartTarget != null ) {
                 string argString = String.Join( " ", argsList.ToArray() );
                 Console.WriteLine( "Starting: {0} {1}", restartTarget, argString );

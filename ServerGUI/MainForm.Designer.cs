@@ -1,4 +1,4 @@
-﻿namespace fCraft.ServerGUI {
+﻿namespace hCraft.ServerGUI {
     partial class MainForm {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
             this.playerListLabel = new System.Windows.Forms.Label();
             this.bPlay = new System.Windows.Forms.Button();
             this.logBox = new System.Windows.Forms.RichTextBox();
-            this.console = new fCraft.ServerGUI.ConsoleBox();
+            this.console = new hCraft.ServerGUI.ConsoleBox();
             this.SuspendLayout();
             // 
             // uriDisplay
@@ -131,7 +131,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject( "$this.Icon" )));
             this.MinimumSize = new System.Drawing.Size( 500, 150 );
             this.Name = "MainForm";
-            this.Text = "fCraft";
+            this.Text = "hCraft";
             this.ResumeLayout( false );
             this.PerformLayout();
 
