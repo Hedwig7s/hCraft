@@ -1,0 +1,13 @@
+C:\Users\Danny\Source\Repos\hCraft\bin\Debug\hCraftGUI.dll
+C:\Users\Danny\Source\Repos\hCraft\bin\Debug\hCraftGUI.pdb
+C:\Users\Danny\Source\Repos\hCraft\hCraftGUI\obj\Debug\hCraftGUI.csproj.AssemblyReference.cache
+C:\Users\Danny\Source\Repos\hCraft\hCraftGUI\obj\Debug\hCraft.GUI.AboutWindow.resources
+C:\Users\Danny\Source\Repos\hCraft\hCraftGUI\obj\Debug\hCraft.GUI.DefaultMapGenGui.resources
+C:\Users\Danny\Source\Repos\hCraft\hCraftGUI\obj\Debug\hCraft.GUI.FlatMapGenGui.resources
+C:\Users\Danny\Source\Repos\hCraft\hCraftGUI\obj\Debug\hCraft.GUI.Properties.Resources.resources
+C:\Users\Danny\Source\Repos\hCraft\hCraftGUI\obj\Debug\hCraft.GUI.RealisticMapGenGui.resources
+C:\Users\Danny\Source\Repos\hCraft\hCraftGUI\obj\Debug\hCraftGUI.csproj.GenerateResource.cache
+C:\Users\Danny\Source\Repos\hCraft\hCraftGUI\obj\Debug\hCraftGUI.csproj.CoreCompileInputs.cache
+C:\Users\Danny\Source\Repos\hCraft\hCraftGUI\obj\Debug\hCraftGUI.csproj.Up2Date
+C:\Users\Danny\Source\Repos\hCraft\hCraftGUI\obj\Debug\hCraftGUI.dll
+C:\Users\Danny\Source\Repos\hCraft\hCraftGUI\obj\Debug\hCraftGUI.pdb

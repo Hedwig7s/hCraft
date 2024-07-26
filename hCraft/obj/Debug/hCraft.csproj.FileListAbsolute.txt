@@ -1,0 +1,8 @@
+C:\Users\Danny\source\repos\hCraft\bin\Debug\hCraft.dll.config
+C:\Users\Danny\source\repos\hCraft\bin\Debug\hCraft.XML
+C:\Users\Danny\source\repos\hCraft\bin\Debug\hCraft.dll
+C:\Users\Danny\source\repos\hCraft\bin\Debug\hCraft.pdb
+C:\Users\Danny\source\repos\hCraft\hCraft\obj\Debug\hCraft.csproj.AssemblyReference.cache
+C:\Users\Danny\source\repos\hCraft\hCraft\obj\Debug\hCraft.csproj.CoreCompileInputs.cache
+C:\Users\Danny\source\repos\hCraft\hCraft\obj\Debug\hCraft.dll
+C:\Users\Danny\source\repos\hCraft\hCraft\obj\Debug\hCraft.pdb
